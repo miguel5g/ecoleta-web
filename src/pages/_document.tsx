@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
 
           <meta property="og:url" content="https://ecoleta-demo.vercel.app/" />
           <meta property="og:title" content="Ecoleta" />
-          <meta property="og:image" content="https://ecoleta-demo/ecoleta-image.png" />
+          <meta property="og:image" content="https://ecoleta-demo.vercel.app/ecoleta-image.png" />
           <meta property="og:description" content="Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente" />
           <meta name="theme-color" content="#34CB79" />
 
@@ -63,13 +63,13 @@ export default class MyDocument extends Document {
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:description" content="Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente" />
           <meta name="twitter:title" content="Ecoleta" />
-          <meta name="twitter:image" content="https://ecoleta-demo/ecoleta-image.png" />
+          <meta name="twitter:image" content="https://ecoleta-demo.vercel.app/ecoleta-image.png" />
           <meta name="twitter:creator" content="@guel5g" />
           <meta name="twitter:site" content="@guel5g" />
 
           <meta name="geo.placename" content="Brasil" />
           <meta name="geo.region" content="BR" />
-          {/* <link rel="canonical" href="https://ecoleta-demo/" /> */}
+          {/* <link rel="canonical" href="https://ecoleta-demo.vercel.app/" /> */}
 
           <meta property="og:type" content="website" />
           <meta property="og:locale" content="pt_BR" />
