@@ -30,7 +30,7 @@ const About: React.FC = () => (
       <Section1>
         <PageTitle>Ecoleta</PageTitle>
         <PageDescription>
-          Uma descrição
+          Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
         </PageDescription>
       </Section1>
 

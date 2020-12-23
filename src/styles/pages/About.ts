@@ -21,6 +21,8 @@ export const Section1 = styled(Section)`
   text-align: center;
   flex-direction: column;
   align-items: center;
+
+  margin-bottom: 45px;
 `;
 
 export const Section2 = styled(Section)`

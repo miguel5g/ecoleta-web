@@ -41,17 +41,17 @@ export default class MyDocument extends Document {
           {/* Tags comentadas eu não sei como funcionam :) */}
           <meta name="google-site-verification" content="cqR-9eTLBmnbh0XpDXQQLZpzqUzCXFie71s6ohl1HsI" />
 
-          <meta name="description" content="Site feito para a comunidade de programação Dinastia Foca" />
+          <meta name="description" content="Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente" />
           <meta name="author" content="Miguel Ângelo" />
-          <meta name="keywords" content="programação, diversão, comunidade, discord, c#, c++, js, javascript, ts, typescript, HTML, CSS, reactjs, nextsjs" />
+          <meta name="keywords" content="reciclagem, ajudar, ecoleta, lixo reciclavel, pontos de coleta" />
 
           {/* <link rel="alternate" href="" hrefLang="pt-br" /> */}
           <meta name="robots" content="index, follow" />
 
-          <meta property="og:url" content="https://github.com/foca-enterprises" />
-          <meta property="og:title" content="Foca Enterprises" />
-          <meta property="og:image" content="https://foca-site.vercel.app/foca_image.png" />
-          <meta property="og:description" content="Comunidade de programação" />
+          <meta property="og:url" content="https://ecoleta-demo.vercel.app/" />
+          <meta property="og:title" content="Ecoleta" />
+          <meta property="og:image" content="https://ecoleta-demo/ecoleta-image.png" />
+          <meta property="og:description" content="Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente" />
           <meta name="theme-color" content="#34CB79" />
 
           {/* <meta property="business:contact_data:country_name" content="PAÍS" /> */}
@@ -61,15 +61,15 @@ export default class MyDocument extends Document {
           {/* <meta property="business:contact_data:phone_number" content="TEL" /> */}
 
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:description" content="Comunidade de programação" />
-          <meta name="twitter:title" content="Foca Enterprises" />
-          <meta name="twitter:image" content="https://foca-site.vercel.app/foca_image.png" />
+          <meta name="twitter:description" content="Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente" />
+          <meta name="twitter:title" content="Ecoleta" />
+          <meta name="twitter:image" content="https://ecoleta-demo/ecoleta-image.png" />
           <meta name="twitter:creator" content="@guel5g" />
           <meta name="twitter:site" content="@guel5g" />
 
           <meta name="geo.placename" content="Brasil" />
           <meta name="geo.region" content="BR" />
-          <link rel="canonical" href="https://foca-site.vercel.app/" />
+          {/* <link rel="canonical" href="https://ecoleta-demo/" /> */}
 
           <meta property="og:type" content="website" />
           <meta property="og:locale" content="pt_BR" />
