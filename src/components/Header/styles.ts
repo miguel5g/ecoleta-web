@@ -16,15 +16,28 @@ export const Container = styled.div`
   box-shadow: 0 7px 6px 0 rgba(33, 43, 54, 0.04);
 
   transition: padding 0.15s;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Logo = styled.img`
   margin-right: 40px;
 
   height: 40px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
 `;
 
 export const Nav = styled.nav`
+  @media (max-width: 768px) {
+    margin-top: 15px;
+  }
 `;
 
 export const NavItem = styled.a`
@@ -44,4 +57,8 @@ export const NavItem = styled.a`
 export const Spacer = styled.div`
   width: 100%;
   height: 67px;
+
+  @media (max-width: 768px) {
+    height: 106px;
+  }
 `;

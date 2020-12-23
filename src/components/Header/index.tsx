@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, createRef } from 'react';
 import Link from 'next/link';
 import { useViewportScroll } from 'framer-motion';
 
@@ -9,12 +9,16 @@ import {
 const Header: React.FC = () => {
   const { scrollY } = useViewportScroll();
   const [isSmall, setSmall] = useState(false);
+  const headerRef = createRef<HTMLDivElement>();
 
   scrollY.onChange((value) => setSmall(value > 0));
 
   return (
     <>
-      <Container className={isSmall ? 'small' : ''}>
+      <Container
+        ref={headerRef}
+        className={isSmall ? 'small' : ''}
+      >
         <Logo src="logo.svg" />
 
         <Nav>

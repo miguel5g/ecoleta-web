@@ -29,6 +29,18 @@ const GlobalStyle = createGlobalStyle`
     /* color: ${({ theme }) => theme.txt.secondary}; */
     text-decoration: none;
   }
+
+  @media (max-width: 900px) {
+    :root {
+      font-size: 90%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      font-size: 80%;
+    }
+  }
 `;
 
 export default GlobalStyle;
