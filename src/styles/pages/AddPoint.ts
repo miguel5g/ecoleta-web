@@ -11,7 +11,7 @@ export const LocalHeader = styled.div`
   justify-content: space-between;
 
   width: auto;
-  padding: 13px 60px;
+  padding: 23px 60px;
 `;
 
 export const Logo = styled.img`
@@ -23,7 +23,7 @@ export const BackButton = styled.a`
   align-items: center;
 
   color: ${({ theme }) => theme.txt.primary};
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
 
   & > svg {
@@ -54,7 +54,7 @@ export const PageTitle = styled.h1`
   margin-bottom: 35px;
 
   color: ${({ theme }) => theme.txt.primary};
-  font-size: 3.3rem;
+  font-size: 2.2rem;
   font-family: 'Ubuntu', sans-serif;
 `;
 
@@ -65,7 +65,7 @@ export const FildTitle = styled.span`
   margin: 35px 0;
 
   color: ${({ theme }) => theme.txt.primary};
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
 
@@ -73,23 +73,44 @@ export const FildTitle = styled.span`
     margin-left: auto;
 
     color: ${({ theme }) => theme.txt.secondary};
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
   }
 `;
 
 export const InputGroup = styled.div`
-  
+  display: flex;
+
+  width: 100%;
+
+  & > label {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 `;
 
-export const InputTitle = styled.span`
-  
+export const SelectGroup = styled.div`
+  display: flex;
+
+  width: 100%;
+
+  & > label {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 `;
 
 export const MapArea = styled.div`
   width: 100%;
   height: 350px;
+  margin-bottom: 23px;
 
   border-radius: 15px;
   overflow: hidden;

@@ -14,8 +14,6 @@ const Points: React.FC = () => {
     ssr: false,
   });
 
-  console.log('Hi');
-
   return (
     <>
       <Head>

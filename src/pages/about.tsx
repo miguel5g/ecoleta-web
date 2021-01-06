@@ -38,13 +38,14 @@ const About: React.FC = () => (
         <div>
           <SectionTitle>Como ajudar</SectionTitle>
           <SectionDescription>
-            Você pode nos ajudar de duas formas, fazendo uma doação para podermosmanter
-            o projeto ou divulgar, para que outras pessoas também conheçam. Contamos com você!
+            Você pode nos ajudar de duas maneiras, fazendo uma doação para podermos manter
+            os custos do projeto ou divulgar,
+            para que outras pessoas também conheçam. Contamos com você!
           </SectionDescription>
 
           <ButtonGroup>
             <ButtonLink
-              href="/"
+              href="https://apoia.se/ecoleta"
               target="_blank"
               rel="noopener noreferrer"
               primary
