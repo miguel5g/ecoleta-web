@@ -3,8 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { FiArrowLeft, FiUpload } from 'react-icons/fi';
-
-import UnderDev from '../components/UnderDev';
+import dynamic from 'next/dynamic';
 
 import {
   BackButton,
@@ -19,27 +18,13 @@ import {
   DropZone,
 } from '../styles/pages/AddPoint';
 
-const Map: React.FC = () => {
-  const {
-    MapContainer, TileLayer,
-  } = require('react-leaflet');
-
-  return (
-    <MapContainer
-      center={[-8.2884698, -35.9696649]}
-      zoom={15}
-      style={{ width: '100%', height: '100%' }}
-    >
-      <TileLayer url="https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWlndWVsNWciLCJhIjoiY2tnYmpvNHp3MGhueTJycXU1cjRuZnR1NiJ9.ykp683SpzbSwoBny0JvydQ" />
-    </MapContainer>
-  );
-};
-
 const AddPoint: React.FC = () => {
   // Temporário até eu terminar todo o densenvolvimento
-  if (process.env.NODE_ENV === 'production') return <UnderDev />;
+  // if (process.env.NODE_ENV === 'production') return <UnderDev />;
 
-  const isClient = process.browser;
+  const Map = dynamic(() => import('../components/Map'), {
+    ssr: false,
+  });
 
   function handleSubmit(data: any) {
     // eslint-disable-next-line no-console
@@ -84,7 +69,7 @@ const AddPoint: React.FC = () => {
           </FildTitle>
 
           <MapArea>
-            {isClient && <Map />}
+            <Map />
           </MapArea>
 
           <FildTitle>

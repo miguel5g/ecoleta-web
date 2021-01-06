@@ -10,8 +10,8 @@ import 'leaflet/dist/leaflet.css';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => (
   <ThemeProvider theme={light}>
-    <Component {...pageProps} />
     <GlobalStyle />
+    <Component {...pageProps} />
   </ThemeProvider>
 );
 
