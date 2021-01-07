@@ -30,6 +30,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  .leaflet-grab {
+    cursor: auto;
+  }
+
   @media (max-width: 900px) {
     :root {
       font-size: 90%;

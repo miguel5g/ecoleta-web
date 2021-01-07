@@ -1,5 +1,7 @@
+import { memo } from 'react';
 import styled from 'styled-components';
 import { Form } from '@unform/web';
+
 import Button from '../../components/Button';
 
 export const Container = styled.div`
@@ -93,20 +95,6 @@ export const InputGroup = styled.div`
   }
 `;
 
-export const SelectGroup = styled.div`
-  display: flex;
-
-  width: 100%;
-
-  & > label {
-    margin-right: 15px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-`;
-
 export const MapArea = styled.div`
   width: 100%;
   height: 350px;
@@ -114,6 +102,51 @@ export const MapArea = styled.div`
 
   border-radius: 15px;
   overflow: hidden;
+`;
+
+export const ItemsList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  list-style: none;
+`;
+
+export const Item = styled.li`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  height: 180px;
+  padding: 32px 24px 16px;
+
+  border-radius: 8px;
+  border: solid 2px ${({ theme }) => theme.bg.secondary};
+  background-color: #F8F8F8;
+
+  text-align: center;
+  font-size: 1.4rem;
+
+  cursor: pointer;
+
+  & > span {
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    margin-top: 12px;
+
+    color: ${({ theme }) => theme.txt.secondary};
+  }
+
+  ${({ selected }: {selected?: boolean}) => (selected ? `
+  background-color: #E1FAEC;
+  border-color: #34CB79;
+
+  & > span {
+    color: ${({ theme }) => theme.txt.primary};
+  }
+  ` : '')}
 `;
 
 export const SubmitButton = styled(Button)`

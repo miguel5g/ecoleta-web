@@ -1,9 +1,13 @@
 import React from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 
-const Map: React.FC = () => (
+interface IMapProps {
+  initialPosition?: [number, number];
+}
+
+const Map: React.FC<IMapProps> = ({ initialPosition }) => (
   <MapContainer
-    center={[-8.2884698, -35.9696649]}
+    center={initialPosition || [0, 0]}
     zoom={15}
     style={{ width: '100%', height: '100%' }}
   >

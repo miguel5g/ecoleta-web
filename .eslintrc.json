@@ -57,6 +57,7 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "no-unused-vars": "warn"
   }
 }
