@@ -1,5 +1,5 @@
 import React, {
-  ChangeEvent, useCallback, useEffect, useMemo, useState,
+  ChangeEvent, useEffect, useMemo, useState,
 } from 'react';
 import { FiArrowLeft, FiUpload } from 'react-icons/fi';
 import Head from 'next/head';
@@ -149,11 +149,7 @@ const AddPoint: React.FC = () => {
 
         <StyledForm onSubmit={handleSubmit}>
           <PageTitle>
-            Cadastrar ponto
-            {' '}
-            <br />
-            {' '}
-            de coleta
+            Cadastrar ponto de coleta
           </PageTitle>
 
           <DropZone>

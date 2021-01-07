@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import styled from 'styled-components';
 import { Form } from '@unform/web';
 
@@ -14,10 +13,22 @@ export const LocalHeader = styled.div`
 
   width: auto;
   padding: 23px 60px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 13px 36px;
+  }
 `;
 
 export const Logo = styled.img`
   height: 40px;
+
+  @media (max-width: 768px) {
+    height: 33px;
+  }
 `;
 
 export const BackButton = styled.a`
@@ -35,6 +46,10 @@ export const BackButton = styled.a`
   &:hover {
     opacity: 0.75;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 7px;
+  }
 `;
 
 export const StyledForm = styled(Form)`
@@ -50,6 +65,17 @@ export const StyledForm = styled(Form)`
   border-radius: 10px;
   background-color: ${({ theme }) => theme.bg.primary};
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.04);
+
+  overflow: hidden;
+
+  @media (max-width: 900px) {
+    width: 95%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 23px;
+  }
 `;
 
 export const PageTitle = styled.h1`
@@ -58,6 +84,7 @@ export const PageTitle = styled.h1`
   color: ${({ theme }) => theme.txt.primary};
   font-size: 2.2rem;
   font-family: 'Ubuntu', sans-serif;
+  text-align: center;
 `;
 
 export const FildTitle = styled.span`
@@ -79,6 +106,15 @@ export const FildTitle = styled.span`
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    & > span {
+      margin-left: 0;
+    }
+  }
 `;
 
 export const InputGroup = styled.div`
@@ -90,6 +126,14 @@ export const InputGroup = styled.div`
     margin-right: 15px;
 
     &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    & > label {
       margin-right: 0;
     }
   }
@@ -109,6 +153,10 @@ export const ItemsList = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   list-style: none;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const Item = styled.li`
@@ -147,11 +195,19 @@ export const Item = styled.li`
     color: ${({ theme }) => theme.txt.primary};
   }
   ` : '')}
+
+  @media (max-width: 768px) {
+    padding: 32px 13px 16px;
+  }
 `;
 
 export const SubmitButton = styled(Button)`
   margin-left: auto;
   margin-top: 35px;
+
+  @media (max-width: 768px) {
+    margin: 35px auto 0;
+  }
 `;
 
 export const DropZone = styled.div`

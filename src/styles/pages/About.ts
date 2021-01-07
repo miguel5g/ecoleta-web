@@ -14,6 +14,10 @@ const Section = styled.section`
 
   padding: 0 180px;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
 `;
 
 export const Section1 = styled(Section)`
@@ -40,6 +44,15 @@ export const Section2 = styled(Section)`
 
     text-align: center;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    & > div {
+      width: 80%;
+    }
+  }
 `;
 
 export const PageTitle = styled.h1`
@@ -55,6 +68,10 @@ export const PageDescription = styled.p`
   font-size: 1.2rem;
 
   max-width: 60%;
+
+  @media (max-width: 768px) {
+    max-width: 80%;
+  }
 `;
 
 export const SectionTitle = styled.h2`
@@ -145,4 +162,10 @@ export const VSeparator = styled.span`
   min-height: 180px;
   background-color: ${lighten(0.85, '#000')};
   margin: auto 20px;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    min-height: 1px;
+    margin: 20px auto;
+  }
 `;
