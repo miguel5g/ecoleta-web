@@ -1,43 +1,31 @@
-import React, { useState, createRef } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { useViewportScroll } from 'framer-motion';
 
 import {
   Container, Logo, Nav, NavItem, Spacer,
 } from './styles';
 
-const Header: React.FC = () => {
-  const { scrollY } = useViewportScroll();
-  const [isSmall, setSmall] = useState(false);
-  const headerRef = createRef<HTMLDivElement>();
+const Header: React.FC = () => (
+  <>
+    <Container>
+      <Logo src="logo.svg" />
 
-  scrollY.onChange((value) => setSmall(value > 0));
+      <Nav>
+        <Link href="/" passHref>
+          <NavItem>Início</NavItem>
+        </Link>
+        <Link href="/points" passHref>
+          <NavItem>Pontos</NavItem>
+        </Link>
+        <Link href="/about" passHref>
+          <NavItem>Sobre</NavItem>
+        </Link>
+      </Nav>
 
-  return (
-    <>
-      <Container
-        ref={headerRef}
-        className={isSmall ? 'small' : ''}
-      >
-        <Logo src="logo.svg" />
+    </Container>
 
-        <Nav>
-          <Link href="/" passHref>
-            <NavItem>Início</NavItem>
-          </Link>
-          <Link href="/points" passHref>
-            <NavItem>Pontos</NavItem>
-          </Link>
-          <Link href="/about" passHref>
-            <NavItem>Sobre</NavItem>
-          </Link>
-        </Nav>
-
-      </Container>
-
-      <Spacer />
-    </>
-  );
-};
+    <Spacer />
+  </>
+);
 
 export default Header;
