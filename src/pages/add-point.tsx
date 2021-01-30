@@ -39,7 +39,7 @@ interface IItem {
   id: string;
   title: string;
   image: string;
-  imageUrl: string;
+  image_url: string;
 }
 
 const AddPoint: React.FC = () => {
@@ -97,7 +97,7 @@ const AddPoint: React.FC = () => {
 
   function handleSubmit(data: any) {
     // eslint-disable-next-line no-console
-    console.log(data);
+    console.log({ ...data, loc: selectedPosition });
   }
 
   function handleSelectUf(event: ChangeEvent<HTMLSelectElement>) {
@@ -229,7 +229,7 @@ const AddPoint: React.FC = () => {
                 onClick={() => handleSelectItem(item.id)}
                 selected={selectedItems.includes(item.id)}
               >
-                <img src={item.imageUrl} alt={item.title} />
+                <img src={item.image_url} alt={item.title} />
                 <span>{item.title}</span>
               </Item>
             ))}
